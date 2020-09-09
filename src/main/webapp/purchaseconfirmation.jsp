@@ -5,6 +5,9 @@
 
 </head>
 <body>
+<%
+    request.getSession().setAttribute("order", null);
+%>
 <h2>Order confirmed</h2>
 We are pleased to tell you that your order has been confirmed. <br>
 Thank you for shopping with us <%=request.getSession().getAttribute("firstname") %> <%=request.getSession().getAttribute("lastname")%> <br>
