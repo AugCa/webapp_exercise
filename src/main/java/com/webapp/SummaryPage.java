@@ -32,7 +32,7 @@ public class SummaryPage extends HttpServlet {
                     Connection con = dbconnection.productConnection();
                     for (Map.Entry me : orderItems.entrySet()) {
                         OrderItem orderItem = (OrderItem) me.getValue();
-                        String query = "UPDATE product_info SET `quantity stock` = `quantity stock` -" + orderItem.getAmount() + " WHERE id=" + orderItem.getId()+ ";";
+                        String query = "UPDATE product_info SET quantity_stock = quantity_stock -" + orderItem.getAmount() + " WHERE id=" + orderItem.getId()+ ";";
                         try{
                             PreparedStatement ps = con.prepareStatement(query);
                             ps.executeUpdate();
