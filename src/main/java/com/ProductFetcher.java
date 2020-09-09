@@ -23,9 +23,9 @@ public class ProductFetcher{
             while(rs.next()){
                 Product product = new Product();
                 product.setId(rs.getInt("id"));
-                product.setPrice(rs.getInt("product price"));
-                product.setProductDescription(rs.getString("product description"));
-                product.setStock(rs.getInt("quantity stock"));
+                product.setPrice(rs.getInt("product_price"));
+                product.setProductDescription(rs.getString("product_description"));
+                product.setStock(rs.getInt("quantity_stock"));
                 product.setProductImage(rs.getString("image"));
                 products.add(product);
 
